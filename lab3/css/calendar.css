@@ -70,3 +70,12 @@
   border-radius: 5px;
   margin-bottom: 50px;
 }
+
+.calendar.dark .grid-cell.holiday,
+.calendar .grid-cell.holiday {
+  border: 2px solid #f00;
+}
+
+.grid-cell .text {
+  text-align: left;
+}
