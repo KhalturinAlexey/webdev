@@ -4,4 +4,12 @@ window.onload = function() {
   button.onclick = function() {
     calendar.classList.toggle('dark');
   }
+
+  var currentDay = new Date().getDate();
+  var currentDateCell = Array
+    .from(document.querySelectorAll('.grid-cell .day'))
+    .find(date => date.innerHTML == currentDay);
+  if (currentDateCell != undefined) {
+    currentDateCell.classList.add('today');
+  }
 }
