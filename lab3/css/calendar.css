@@ -48,3 +48,16 @@
 .grid-cell.weekend {
   background: #eee;
 }
+
+.calendar.dark {
+  background: #333;
+  color: #fff;
+}
+
+.calendar.dark .grid-cell {
+  border: 1px solid #ccc;
+}
+
+.calendar.dark .grid-cell.weekend {
+  background: #666;
+}
