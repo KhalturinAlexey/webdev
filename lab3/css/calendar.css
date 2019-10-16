@@ -61,3 +61,12 @@
 .calendar.dark .grid-cell.weekend {
   background: #666;
 }
+
+.switch-theme-button {
+  font-family: Arial, Helvetica, sans-serif;
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
