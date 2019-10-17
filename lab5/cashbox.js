@@ -1,7 +1,12 @@
 var cashbox = {
   amount: 0,
   addPayment: function(payment) {
-    // your code
+    if (payment && payment.amount > 0) {
+      this.amount += payment.amount;
+      console.log('cashbox amount = ', this.amount);
+    } else {
+      console.error('Amount not affected');
+    }
   },
   refundPayment: function(refund) {
     // your code
@@ -13,3 +18,7 @@ cashbox.addPayment({ amount: 10, info: 'Оплата ЖКХ' }); // cashbox amou
 
 cashbox.refundPayment({ amount: 10, info: 'Возврат клиенту' }); // cashbox amount = 0
 cashbox.refundPayment({ amount: 10, info: 'Возврат клиенту' }); // cashbox amount not affected (warning)
+
+cashbox.addPayment({ amount: 'qwerty', info: 'Оплата штрафа' }); // show error (console), amount not affected
+cashbox.addPayment({ }); // show error (console), amount not affected
+cashbox.addPayment(); // show error (console), amount not affected
