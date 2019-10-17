@@ -21,9 +21,22 @@ do {
 }
 while (isCoordinatesEqual(soldier2.currentCoordinates, soldier1.currentCoordinates));
 
+var isFirstSoldierTurn = true;
 setInterval(function() {
+  var currentSolider;
+  var otherSolider;
+  if (isFirstSoldierTurn) {
+    currentSolider = soldier1;
+    otherSolider = soldier2;
+  } else {
+    currentSolider = soldier2;
+    otherSolider = soldier1;
+  }
+
   var shotCoordinates = getCoordinates();
-  soldier1.shot(shotCoordinates.x, shotCoordinates.y);
+  currentSolider.shot(shotCoordinates.x, shotCoordinates.y);
+
+  isFirstSoldierTurn = !isFirstSoldierTurn;
 }, 1000);
 
 function getCoordinates() {
