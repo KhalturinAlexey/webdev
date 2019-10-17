@@ -4,17 +4,18 @@ function pulloutArray(array) {
     var item = array[i];
     if (Array.isArray(item)) {
       for (var j = 0; j < item.length; j++) {
-        if (Number.isInteger(item[j])) {
-          result.push(item[j]);
-        }
+        addIfNumber(item[j], result);
       }
     } else {
-      if (Number.isInteger(item)) {
-        result.push(item);
-      }
+      addIfNumber(item, result);
     }
   }
   return result;
+}
+function addIfNumber(value, result) {
+  if (Number.isInteger(value)) {
+    result.push(value);
+  }
 }
 
 pulloutArray([1, 2, 3]); // return [1, 2, 3]
