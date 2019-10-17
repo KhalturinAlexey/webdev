@@ -15,14 +15,20 @@ var soldier2 = {
   }
 };
 
-soldier1.currentCoordinates.x = Math.floor(Math.random() * 100);
-soldier1.currentCoordinates.y = Math.floor(Math.random() * 100);
-
-soldier2.currentCoordinates.x = Math.floor(Math.random() * 100);
-soldier2.currentCoordinates.y = Math.floor(Math.random() * 100);
+soldier1.currentCoordinates = getCoordinates();
+soldier2.currentCoordinates = getCoordinates();
 
 setInterval(function() {
-  var shotX = Math.floor(Math.random() * 100);
-  var shotY = Math.floor(Math.random() * 100);
-  soldier1.shot(shotX, shotY);
+  var shotCoordinates = getCoordinates();
+  soldier1.shot(shotCoordinates.x, shotCoordinates.y);
 }, 1000);
+
+function getCoordinates() {
+  return {
+    x: getRandomValue(),
+    y: getRandomValue()
+  }
+}
+function getRandomValue() {
+  return Math.floor(Math.random() * 100);
+}
