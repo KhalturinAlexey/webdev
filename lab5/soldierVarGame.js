@@ -22,8 +22,6 @@ soldier2.currentCoordinates.x = Math.floor(Math.random() * 100);
 soldier2.currentCoordinates.y = Math.floor(Math.random() * 100);
 
 setInterval(function() {
-  // todo: spawn 2 soldiers
-
   var shotX = Math.floor(Math.random() * 100);
   var shotY = Math.floor(Math.random() * 100);
   soldier1.shot(shotX, shotY);
