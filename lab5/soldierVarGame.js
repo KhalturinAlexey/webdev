@@ -40,6 +40,9 @@ setInterval(function() {
   currentSolider.shot(shotCoordinates.x, shotCoordinates.y);
   if (isCoordinatesEqual(shotCoordinates, otherSolider.currentCoordinates)) {
     otherSolider.health -= 25;
+    if (otherSolider.health == 0) {
+      console.log(currentSolider.name + ' win! ' + otherSolider.name + ' lost!');
+    }
   }
 
   isFirstSoldierTurn = !isFirstSoldierTurn;
