@@ -22,7 +22,7 @@ do {
 while (isCoordinatesEqual(soldier2.currentCoordinates, soldier1.currentCoordinates));
 
 var isFirstSoldierTurn = true;
-setInterval(function() {
+var gameTimer = setInterval(function() {
   var currentSolider;
   var otherSolider;
   if (isFirstSoldierTurn) {
@@ -42,6 +42,7 @@ setInterval(function() {
     otherSolider.health -= 25;
     if (otherSolider.health == 0) {
       console.log(currentSolider.name + ' win! ' + otherSolider.name + ' lost!');
+      clearInterval(gameTimer);
     }
   }
 
