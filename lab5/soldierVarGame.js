@@ -47,7 +47,7 @@ var gameTimer = setInterval(function() {
   }
 
   isFirstSoldierTurn = !isFirstSoldierTurn;
-}, 1000);
+}, 1);
 
 function getCoordinates() {
   return {
@@ -56,7 +56,7 @@ function getCoordinates() {
   }
 }
 function getRandomValue() {
-  return Math.floor(Math.random() * 100).toFixed(0);
+  return Math.floor(Math.random() * 10).toFixed(0);
 }
 function isCoordinatesEqual(coordinates1, coordinates2) {
   return coordinates1.x == coordinates2.x && coordinates1.y == coordinates2.y;
