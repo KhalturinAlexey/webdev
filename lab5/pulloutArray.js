@@ -16,3 +16,9 @@ function pulloutArray(array) {
   }
   return result;
 }
+
+pulloutArray([1, 2, 3]); // return [1, 2, 3]
+pulloutArray([]); // return []
+pulloutArray([1, [2, 3, 4], 5]); // return [1, 2, 3, 4, 5]
+pulloutArray([1, [2, 3, 4], 5, [1]]); // return [1, 2, 3, 4, 5, 1]
+pulloutArray([1, [1], null, NaN, ['test']]); // return [1, 1]
