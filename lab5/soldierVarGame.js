@@ -38,6 +38,9 @@ setInterval(function() {
     shotCoordinates = getCoordinates();
   }
   currentSolider.shot(shotCoordinates.x, shotCoordinates.y);
+  if (isCoordinatesEqual(shotCoordinates, otherSolider.currentCoordinates)) {
+    otherSolider.health -= 25;
+  }
 
   isFirstSoldierTurn = !isFirstSoldierTurn;
 }, 1000);
