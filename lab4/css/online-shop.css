@@ -42,6 +42,10 @@ body {
   display: flex;
 }
 
+.page .content {
+  flex: 3;
+}
+
 .page .categories {
   display: flex;
   flex-direction: column;
@@ -61,17 +65,13 @@ body {
   color: #fff;
 }
 
-.page .products {
-  flex: 3;
-}
-
 .products .products-title {
   margin: 0;
   font-size: 30px;
   margin-bottom: 20px;
 }
 
-.products .products-list {
+.products-list {
   display: flex;
   flex: 3 1 auto;
   flex-wrap: wrap;
