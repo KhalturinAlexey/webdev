@@ -126,3 +126,21 @@ body {
   color: #fff;
   border: 1px solid #fff;
 }
+
+.product-detail .product {
+  display: flex;
+  padding: 0 10px;
+}
+
+.product-detail .product-image {
+  margin-right: 20px;
+}
+
+.product-detail .product-info {
+  flex: 1;
+}
+
+.product-detail .product-description {
+  text-align: justify;
+  margin-bottom: 20px;
+}
