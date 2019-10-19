@@ -55,6 +55,10 @@ body {
   height: 30px;
 }
 
+.folder-explorer .row .info {
+  color: #999;
+}
+
 .folder-explorer .row.selected {
   background: rgba(150, 200, 255, 0.5);
 }
