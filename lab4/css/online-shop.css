@@ -68,9 +68,8 @@ body {
 .products .products-list {
   display: flex;
   flex: 3 1 auto;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
   justify-content: space-around;
-  align-items: flex-start;
 }
 
 .products-list .product {
@@ -84,9 +83,8 @@ body {
 
 .product .product-image {
   display: block;
-  width: 100%;
   height: auto;
-  margin-bottom: 10px;
+  margin: 0 auto 10px;
 }
 
 .product .product-name {
