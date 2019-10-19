@@ -21,6 +21,8 @@ window.onload = function() {
   var leftPanelSelectedIndex = 0;
   var rightPanelSelectedIndex = 0;
 
+  select(leftPanelItems[0]);
+
   document.onkeydown = function checkKey(e) {
     switch (e.keyCode) {
       case arrowLeftKeyCode:
@@ -40,4 +42,3 @@ window.onload = function() {
     }
   }
 }
-
