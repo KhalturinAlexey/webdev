@@ -56,11 +56,7 @@ body {
 }
 
 .content .products {
-  display: flex;
-  flex: 3 1 auto;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex: 3;
 }
 
 .products .products-title {
@@ -69,8 +65,15 @@ body {
   margin-bottom: 20px;
 }
 
+.products .products-list {
+  display: flex;
+  flex: 3 1 auto;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
 
-.products .product {
+.products-list .product {
   flex-basis: 30%;
   min-width: 200px;
   padding: 10px;
@@ -90,7 +93,7 @@ body {
   display: block;
   font-size: 24px;
   color: #000;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 .product .product-price {
   display: block;
