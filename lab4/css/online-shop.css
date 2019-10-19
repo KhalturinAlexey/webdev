@@ -38,11 +38,11 @@ body {
   text-decoration: underline;
 }
 
-.content {
+.page {
   display: flex;
 }
 
-.content .categories {
+.page .categories {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -61,7 +61,7 @@ body {
   color: #fff;
 }
 
-.content .products {
+.page .products {
   flex: 3;
 }
 
