@@ -65,7 +65,8 @@ body {
   color: #fff;
 }
 
-.products .products-title {
+.products .products-title,
+.other-products .other-products-title {
   margin: 0;
   font-size: 30px;
   margin-bottom: 20px;
