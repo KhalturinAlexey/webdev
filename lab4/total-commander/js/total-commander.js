@@ -25,6 +25,7 @@ window.onload = function() {
         var selection = document.querySelectorAll('.selected');
         selection.forEach(element => element.classList.remove('selected'));
     }
+
     switch (e.keyCode) {
       case arrowLeftKeyCode:
         isLeftPanelSelected = true;
@@ -36,11 +37,7 @@ window.onload = function() {
         } else if (!isLeftPanelSelected && rightPanelSelectedIndex > 0) {
           rightPanelSelectedIndex--;
         }
-        if (isLeftPanelSelected) {
-          select(leftPanelItems[leftPanelSelectedIndex]);
-        } else {
-          select(rightPanelItems[rightPanelSelectedIndex]);
-        }
+        select(isLeftPanelSelected ? leftPanelItems[leftPanelSelectedIndex] : rightPanelItems[rightPanelSelectedIndex]);
         break;
       case arrowRightKeyCode:
         isLeftPanelSelected = false;
@@ -52,11 +49,7 @@ window.onload = function() {
         } else if (!isLeftPanelSelected && rightPanelSelectedIndex < rightPanelItems.length - 1) {
           rightPanelSelectedIndex++;
         }
-        if (isLeftPanelSelected) {
-          select(leftPanelItems[leftPanelSelectedIndex]);
-        } else {
-          select(rightPanelItems[rightPanelSelectedIndex]);
-        }
+        select(isLeftPanelSelected ? leftPanelItems[leftPanelSelectedIndex] : rightPanelItems[rightPanelSelectedIndex]);
         break;
       default:
         break;
