@@ -1,3 +1,60 @@
 * {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.total-commander-app {
+  background: #ccc;
+  padding: 20px 10px;
+  margin-top: 50px;
+}
+
+.total-commander-app .title {
+  margin: 0 0 20px;
+  padding-left: 20px;
+}
+
+.workspace {
+  display: flex;
+}
+
+.workspace .panel {
+  flex: 1 1 auto;
+  padding: 0 10px;
+}
+
+.panel .address-bar {
+  width: 100%;
+  border: 1px solid #000;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.panel .folder-explorer {
+  width: 100%;
+  padding: 0 10px;
+  border: 1px solid #476aff;
+  border-spacing: 0;
+  background: #fff;
+  font-weight: 700;
+}
+
+.folder-explorer .row {
+  padding: 5px 0;
+  height: 30px;
+}
+
+.folder-explorer .row.selected {
+  background: rgba(150, 200, 255, 0.5);
+}

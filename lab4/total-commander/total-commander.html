@@ -1,13 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Total Commander</title>
+  <title>Total Commander for web</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/total-commander.css">
 </head>
 
 <body>
+  <div class="container">
+    <div class="total-commander-app">
+      <h1 class="title">Total Commander for web</h1>
+      <div class="workspace">
+        <div class="panel">
+          <input type="text" value="C:\Documents And Settings\User" class="address-bar">
+          <table class="folder-explorer">
+            <tbody>
+              <tr class="row">
+                <td colspan="2" class="back-button">...</td>
+              </tr>
+              <tr class="row">
+                <td class="name">file1.txt</td>
+                <td class="info">100kb</td>
+              </tr>
+              <tr class="row selected">
+                <td class="name">folder</td>
+                <td class="info">folder</td>
+              </tr>
+              <tr class="row">
+                <td class="name">.git</td>
+                <td class="info">folder</td>
+              </tr>
+              <tr class="row">
+                <td class="name">film.move</td>
+                <td class="info">2,5gb</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="panel">
+          <input type="text" value="C:\" class="address-bar">
+          <table class="folder-explorer">
+            <tbody>
+              <tr class="row selected">
+                <td colspan="2" class="back-button">...</td>
+              </tr>
+              <tr class="row">
+                <td class="name">windows</td>
+                <td class="info">folder</td>
+              </tr>
+              <tr class="row">
+                <td class="name">system32</td>
+                <td class="info">folder</td>
+              </tr>
+              <tr class="row">
+                <td class="name">tog.txt</td>
+                <td class="info">1kb</td>
+              </tr>
+              <tr class="row">
+                  <td class="name"></td>
+                  <td class="info"></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 
