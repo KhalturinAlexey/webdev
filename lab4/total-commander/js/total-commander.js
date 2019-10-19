@@ -3,16 +3,18 @@ var arrowUpKeyCode = 38;
 var arrowRightKeyCode = 39;
 var arrowDownKeyCode = 40;
 
-function addClass(element, className) {
-  if (element && !element.classList.contains(className)) {
-    element.classList.add(className);
+function select(element) {
+  if (element && !element.classList.contains('selected')) {
+    element.classList.add('selected');
   }
 }
 
-window.onload = function() {
-  var leftPanel = document.querySelector('.panel-left');
-  var rightPanel = document.querySelector('.panel-right');
+function clearSelection() {
+  var selection = document.querySelectorAll('.selected');
+  selection.forEach(element => element.classList.remove('selected'));
+}
 
+window.onload = function() {
   var leftPanelItems = document.querySelectorAll('.panel-left .row');
   var rightPanelItems = document.querySelectorAll('.panel-right .row');
 
@@ -22,22 +24,17 @@ window.onload = function() {
   document.onkeydown = function checkKey(e) {
     switch (e.keyCode) {
       case arrowLeftKeyCode:
-        rightPanel.classList.remove('selected');
-        rightPanelItems.forEach(item => item.classList.remove('selected'));
-        addClass(leftPanel, 'selected');
-        addClass(leftPanelItems[leftPanelSelectedIndex], 'selected');
+        clearSelection();
+        select(leftPanelItems[leftPanelSelectedIndex]);
         break;
       case arrowUpKeyCode:
         break;
       case arrowRightKeyCode:
-          leftPanel.classList.remove('selected');
-          leftPanelItems.forEach(item => item.classList.remove('selected'));
-          addClass(rightPanel, 'selected');
-          addClass(rightPanelItems[rightPanelSelectedIndex], 'selected');
+        clearSelection();
+        select(rightPanelItems[rightPanelSelectedIndex]);
         break;
       case arrowDownKeyCode:
         break;
-  
       default:
         break;
     }
