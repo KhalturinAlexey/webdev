@@ -14,7 +14,7 @@ window.onload = function() {
   currentYearElement.innerHTML = currentDate.getFullYear();
 
   var currentDateCell = Array
-    .from(document.querySelectorAll('.grid-cell .day'))
+    .from(document.querySelectorAll('.grid-cell .date:not(.disabled) .day'))
     .find(date => date.innerHTML == currentDate.getDate());
   if (currentDateCell != undefined) {
     currentDateCell.classList.add('today');
