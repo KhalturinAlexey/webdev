@@ -5,10 +5,17 @@ window.onload = function() {
     calendar.classList.toggle('dark');
   }
 
-  var currentDay = new Date().getDate();
+  var currentDate = new Date();
+
+  var currentMonthElement = document.querySelector('.calendar-header .current-month');
+  currentMonthElement.innerHTML = currentDate.toLocaleString('en', { month: 'long' });
+
+  var currentYearElement = document.querySelector('.calendar-header .current-year');
+  currentYearElement.innerHTML = currentDate.getFullYear();
+
   var currentDateCell = Array
     .from(document.querySelectorAll('.grid-cell .day'))
-    .find(date => date.innerHTML == currentDay);
+    .find(date => date.innerHTML == currentDate.getDate());
   if (currentDateCell != undefined) {
     currentDateCell.classList.add('today');
   }
