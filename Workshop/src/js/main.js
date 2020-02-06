@@ -1,5 +1,5 @@
 function TodoModel() {
-  this.todoTasks = [];
+  this.todoTasks = JSON.parse(localStorage.getItem('todoTasks')) || [];
   
   this.getTasks = function () {
     return this.todoTasks;
@@ -92,7 +92,6 @@ function TodoController() {
   this.todoModel = new TodoModel();
   this.todoView = new TodoView();
   
-  this.todoModel.todoTasks = JSON.parse(localStorage.getItem('todoTasks')) || [];
   this.todoView.setTodoTasks(this.todoModel.todoTasks);
   
   this.todoView.onAddTodo = function(task) {
