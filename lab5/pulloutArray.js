@@ -1,13 +1,15 @@
 function pulloutArray(array) {
   var result = [];
-  for (var i = 0; i < array.length; i++) {
-    var item = array[i];
-    if (Array.isArray(item)) {
-      for (var j = 0; j < item.length; j++) {
-        addIfNumber(item[j], result);
+  if (Array.isArray(array)) {
+    for (var i = 0; i < array.length; i++) {
+      var item = array[i];
+      if (Array.isArray(item)) {
+        for (var j = 0; j < item.length; j++) {
+          addIfNumber(item[j], result);
+        }
+      } else {
+        addIfNumber(item, result);
       }
-    } else {
-      addIfNumber(item, result);
     }
   }
   return result;
