@@ -1,7 +1,7 @@
-var arrowLeftKeyCode = 37;
-var arrowUpKeyCode = 38;
-var arrowRightKeyCode = 39;
-var arrowDownKeyCode = 40;
+var ARROW_LEFT_KEY_CODE = 37;
+var ARROW_UP_KEY_CODE = 38;
+var ARROW_RIGHT_KEY_CODE = 39;
+var ARROW_DOWN_KEY_CODE = 40;
 
 function select(element) {
   if (element && !element.classList.contains("selected")) {
@@ -26,21 +26,21 @@ window.onload = function() {
 
   document.onkeydown = function checkKey(e) {
     if (
-      e.keyCode == arrowLeftKeyCode ||
-      e.keyCode == arrowUpKeyCode ||
-      e.keyCode == arrowRightKeyCode ||
-      e.keyCode == arrowDownKeyCode
+      e.keyCode == ARROW_LEFT_KEY_CODE ||
+      e.keyCode == ARROW_UP_KEY_CODE ||
+      e.keyCode == ARROW_RIGHT_KEY_CODE ||
+      e.keyCode == ARROW_DOWN_KEY_CODE
     ) {
       var selection = document.querySelectorAll(".selected");
       selection.forEach(element => element.classList.remove("selected"));
     }
 
     switch (e.keyCode) {
-      case arrowLeftKeyCode:
+      case ARROW_LEFT_KEY_CODE:
         isLeftPanelSelected = true;
         select(leftPanelItems[leftPanelSelectedIndex]);
         break;
-      case arrowUpKeyCode:
+      case ARROW_UP_KEY_CODE:
         if (isLeftPanelSelected && leftPanelSelectedIndex > 0) {
           leftPanelSelectedIndex--;
         } else if (!isLeftPanelSelected && rightPanelSelectedIndex > 0) {
@@ -52,11 +52,11 @@ window.onload = function() {
             : rightPanelItems[rightPanelSelectedIndex]
         );
         break;
-      case arrowRightKeyCode:
+      case ARROW_RIGHT_KEY_CODE:
         isLeftPanelSelected = false;
         select(rightPanelItems[rightPanelSelectedIndex]);
         break;
-      case arrowDownKeyCode:
+      case ARROW_DOWN_KEY_CODE:
         if (
           isLeftPanelSelected &&
           leftPanelSelectedIndex < leftPanelItems.length - 1
