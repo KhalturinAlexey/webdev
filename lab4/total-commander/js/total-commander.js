@@ -10,8 +10,13 @@ function select(element) {
 }
 
 window.onload = function() {
-  var leftPanelItems = document.querySelectorAll(".panel-left .row");
-  var rightPanelItems = document.querySelectorAll(".panel-right .row");
+  var leftPanelItems = Array.from(
+    document.querySelectorAll(".panel-left .row")
+  );
+  var rightPanelItems = Array.from(
+    document.querySelectorAll(".panel-right .row")
+  );
+  rightPanelItems.pop();
   var isLeftPanelSelected = true;
 
   var leftPanelSelectedIndex = 0;
