@@ -11,7 +11,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   height: 100%;
-  background: #eee;
+  background: #fffaf6;
 }
 
 .container {
@@ -26,16 +26,19 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 30px 0 20px;
-  color: #fc7603;
+  color: #e06900;
 }
 
 .header .logo {
   font-size: 36px;
+  border: 2px solid #e06900;
+  padding: 10px;
+  font-weight: bold;
 }
 
 .header .shopping-cart {
-  font-size: 22px;
-  text-decoration: underline;
+  cursor: pointer;
+  fill: #e06900;
 }
 
 .page {
@@ -44,6 +47,7 @@ body {
 
 .page .content {
   flex: 3;
+  padding: 10px;
 }
 
 .page .categories {
@@ -55,22 +59,15 @@ body {
 }
 
 .categorie-tab {
-  padding: 10px 5px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.15) 100%
-  );
-  border-bottom: 1px solid #333;
-}
-.categorie-tab:hover {
+  padding: 20px 10px;
   cursor: pointer;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.5) 100%
-  );
-  color: #fff;
+  color: #e06900;
+  font-weight: bold;
+}
+
+.categorie-tab:hover {
+  background-color: #e06900;
+  color: #ffeee0;
 }
 
 .products .products-title,
@@ -78,6 +75,7 @@ body {
   margin: 0;
   font-size: 30px;
   margin-bottom: 20px;
+  color: #e06900;
 }
 
 .products-list {
@@ -91,7 +89,7 @@ body {
   flex-basis: 30%;
   min-width: 200px;
   padding: 10px;
-  background: #ddd;
+  background: #ffefe0;
   border-radius: 10px;
   margin-bottom: 30px;
 }
@@ -105,9 +103,15 @@ body {
 .product .product-name {
   display: block;
   font-size: 24px;
-  color: #000;
+  color: #e06900;
   margin: 0 0 10px;
 }
+
+.product .product-name .detail-link {
+  text-decoration: none;
+  color: #e06900;
+}
+
 .product .product-price {
   display: block;
   font-size: 16px;
@@ -122,15 +126,16 @@ body {
 .product .product-add-to-cart {
   display: inline-block;
   margin-bottom: 10px;
-  color: #fc7603;
+  color: #e06900;
+  background-color: #fff;
   padding: 5px 10px;
-  border: 1px solid #fc7603;
+  border: 1px solid #e06900;
   border-radius: 5px;
 }
 
 .product .product-add-to-cart:hover {
   cursor: pointer;
-  background: #fc7603;
+  background: #e06900;
   color: #fff;
   border: 1px solid #fff;
 }
